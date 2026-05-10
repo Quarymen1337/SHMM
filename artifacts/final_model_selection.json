@@ -1,0 +1,33 @@
+{
+  "final_recommendation": {
+    "model": "v18_final",
+    "config": "examples/gan_v18_final.json",
+    "artifact_dir": "artifacts/train_gan_v18_final",
+    "dataset": "data/processed/all_sources_strength_v16_full.csv",
+    "samples_total": 1808,
+    "reason": "Best validated quality on full dataset with calibrated uncertainty"
+  },
+  "metrics": {
+    "validation": {
+      "mae": 3.801394720768597,
+      "rmse": 5.919455759298224,
+      "mape": 21.476902471493116,
+      "r2": 0.8674617190837057
+    },
+    "day_28": {
+      "mae": 4.965836578771932,
+      "rmse": 7.5451979523637265,
+      "mape": 13.602799414154045,
+      "r2": 0.7921934889099913
+    },
+    "uncertainty": {
+      "picp95": 0.960635359116022,
+      "picp95_conformal": 0.9578729281767956,
+      "mean_uncertainty_mpa": 5.272917057442095
+    }
+  },
+  "status": {
+    "state": "locked_final",
+    "updated": "2026-05-10"
+  }
+}

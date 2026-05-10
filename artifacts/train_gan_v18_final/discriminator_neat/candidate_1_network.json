@@ -1,0 +1,37 @@
+{
+  "algorithm": "python-neat",
+  "objective": 0.41108915489218756,
+  "fitness": 0.7086724439295997,
+  "input_names": [
+    "cement",
+    "sand",
+    "gravel",
+    "water",
+    "plasticizer_kg",
+    "fly_ash",
+    "microsilica_kg",
+    "source_synthetic",
+    "source_boxcrete",
+    "source_normal_concrete",
+    "water_cement_ratio",
+    "cement_water_ratio",
+    "log_cw_ratio",
+    "effective_wc_ratio",
+    "aggregate_binder_ratio",
+    "plasticizer_binder_pct",
+    "total_mass",
+    "strength_day1_scaled",
+    "strength_day3_scaled",
+    "strength_day7_scaled",
+    "strength_day28_scaled"
+  ],
+  "output_names": [
+    "realness"
+  ],
+  "config": "artifacts/train_gan_v18_final/discriminator_neat/neat_config.ini",
+  "files": {
+    "genome": "artifacts/train_gan_v18_final/discriminator_neat/candidate_1_genome.pkl",
+    "config": "artifacts/train_gan_v18_final/discriminator_neat/neat_config.ini",
+    "network": "artifacts/train_gan_v18_final/discriminator_neat/candidate_1_network.pkl"
+  }
+}

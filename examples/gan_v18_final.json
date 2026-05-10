@@ -1,0 +1,80 @@
+{
+  "dataset": {
+    "data_path": "../data/processed/all_sources_strength_v16_full.csv",
+    "components": [
+      "cement",
+      "sand",
+      "gravel",
+      "water",
+      "plasticizer_kg",
+      "fly_ash",
+      "microsilica_kg",
+      "source_synthetic",
+      "source_boxcrete",
+      "source_normal_concrete"
+    ],
+    "strength_by_day": {
+      "1": "strength_1",
+      "3": "strength_3",
+      "7": "strength_7",
+      "28": "strength_28"
+    },
+    "min_time": 1,
+    "max_time": 28
+  },
+  "physics": {
+    "cement_feature": "cement",
+    "water_feature": "water",
+    "add_log_time_feature": true,
+    "add_abrams_features": true,
+    "add_extended_features": true,
+    "monotonic_weight": 0.3,
+    "abrams_weight": 0.5
+  },
+  "generator": {
+    "hidden_layers": [192, 160, 128, 96, 64],
+    "noise_dim": 14,
+    "dropout": 0.1,
+    "learning_rate": 0.0014,
+    "weight_decay": 0.0001,
+    "batch_size": 72,
+    "warmup_epochs": 30,
+    "epochs_per_round": 26,
+    "early_stopping_rounds": 12,
+    "supervised_weight": 1.7,
+    "adversarial_weight": 0.06,
+    "mape_weight": 0.12,
+    "period_weights": [0.3, 1.4, 2.2, 8.5],
+    "max_grad_norm": 1.5,
+    "use_uncertainty_head": true,
+    "nll_weight": 0.24,
+    "aux_day28_weight": 0.45,
+    "use_day28_aux_head": true
+  },
+  "discriminator": {
+    "neat_config_path": "",
+    "optimizer": {
+      "limit_generations": 5,
+      "pop_size": 160,
+      "es_population": 320,
+      "top_k": 2,
+      "seed": 42
+    },
+    "prior_std": 0.6,
+    "posterior_scale_init": 0.08,
+    "kl_weight": 0.02,
+    "bnn_learning_rate": 0.006,
+    "bnn_epochs": 64,
+    "bnn_batch_size": 72,
+    "bnn_validation_split": 0.2,
+    "bnn_mc_samples": 24,
+    "bnn_early_stopping_rounds": 12
+  },
+  "training": {
+    "rounds": 3,
+    "validation_split": 0.2,
+    "seed": 42,
+    "generator_mc_samples": 24,
+    "fake_jitter_std": 0.2
+  }
+}

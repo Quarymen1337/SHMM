@@ -1,0 +1,89 @@
+{
+  "stage": "train_workability",
+  "artifacts_dir": "artifacts/train_workability",
+  "n_train": 699,
+  "n_val": 174,
+  "feature_names": [
+    "cement",
+    "slag_kg",
+    "fly_ash",
+    "microsilica_kg",
+    "water",
+    "plasticizer_kg",
+    "sand",
+    "gravel",
+    "wc_ratio",
+    "wb_ratio",
+    "plasticizer_binder_pct",
+    "aggregate_binder_ratio",
+    "total_mass"
+  ],
+  "metrics": {
+    "train": {
+      "mae": 10.583656249412327,
+      "rmse": 16.456734612776692,
+      "mape": 7.057438738256258,
+      "r2": 0.8518778652721157
+    },
+    "validation": {
+      "mae": 13.254946582590637,
+      "rmse": 21.65643907250481,
+      "mape": 7.974647519682571,
+      "r2": 0.7518743302649648
+    },
+    "validation_picp95": 0.5689655172413793,
+    "validation_mean_uncertainty_mm": 6.58388614654541
+  },
+  "training_history": [
+    {
+      "epoch": 219,
+      "train_loss": 0.07858280088747178,
+      "val_mse": 546.4626700006423
+    },
+    {
+      "epoch": 220,
+      "train_loss": 0.07798630676001779,
+      "val_mse": 543.7427212483908
+    },
+    {
+      "epoch": 221,
+      "train_loss": 0.0781585649188837,
+      "val_mse": 641.6678237492889
+    },
+    {
+      "epoch": 222,
+      "train_loss": 0.07099152653769873,
+      "val_mse": 527.7028731976645
+    },
+    {
+      "epoch": 223,
+      "train_loss": 0.08239203270455457,
+      "val_mse": 589.1443631258687
+    },
+    {
+      "epoch": 224,
+      "train_loss": 0.07303737934268424,
+      "val_mse": 564.7957145081723
+    },
+    {
+      "epoch": 225,
+      "train_loss": 0.07430519800478638,
+      "val_mse": 597.2288426480477
+    },
+    {
+      "epoch": 226,
+      "train_loss": 0.07662828734546942,
+      "val_mse": 595.9430727287604
+    },
+    {
+      "epoch": 227,
+      "train_loss": 0.07973479282361413,
+      "val_mse": 646.3782649612839
+    },
+    {
+      "epoch": 228,
+      "train_loss": 0.07510402484214698,
+      "val_mse": 526.8464094004396
+    }
+  ]
+}

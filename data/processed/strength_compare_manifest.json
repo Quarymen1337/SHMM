@@ -1,0 +1,18 @@
+{
+  "strength_synthetic_v7schema.csv": {
+    "rows": 200,
+    "cols": 12
+  },
+  "strength_lab_narrow_v7schema.csv": {
+    "rows": 67,
+    "cols": 12
+  },
+  "strength_workability_v7schema.csv": {
+    "rows": 0,
+    "cols": 12
+  },
+  "strength_merged_v7schema.csv": {
+    "rows": 267,
+    "cols": 12
+  }
+}

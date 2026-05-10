@@ -1,0 +1,244 @@
+{
+  "stage": "train_gan",
+  "artifacts_dir": "artifacts/train_gan_v18_final",
+  "generator_model": "artifacts/train_gan_v18_final/generator.pt",
+  "discriminator_model": "artifacts/train_gan_v18_final/discriminator_bnn.pt",
+  "config_file": "artifacts/train_gan_v18_final/gan_config.resolved.json",
+  "discriminator_neat_summary": "artifacts/train_gan_v18_final/discriminator_neat_summary.json",
+  "training_history": "artifacts/train_gan_v18_final/gan_training_history.json",
+  "validation_predictions": "artifacts/train_gan_v18_final/validation_predictions.csv",
+  "dataset": {
+    "samples_total": 1808,
+    "samples_train": 1446,
+    "samples_val": 362,
+    "feature_names": [
+      "cement",
+      "sand",
+      "gravel",
+      "water",
+      "plasticizer_kg",
+      "fly_ash",
+      "microsilica_kg",
+      "source_synthetic",
+      "source_boxcrete",
+      "source_normal_concrete",
+      "water_cement_ratio",
+      "cement_water_ratio",
+      "log_cw_ratio",
+      "effective_wc_ratio",
+      "aggregate_binder_ratio",
+      "plasticizer_binder_pct",
+      "total_mass"
+    ],
+    "component_bounds": {
+      "cement": [
+        0.0,
+        894.67
+      ],
+      "sand": [
+        336.0,
+        2357.0
+      ],
+      "gravel": [
+        0.0,
+        1600.0
+      ],
+      "water": [
+        43.0,
+        443.0
+      ],
+      "plasticizer_kg": [
+        0.0,
+        39.2
+      ],
+      "fly_ash": [
+        0.0,
+        1198.67
+      ],
+      "microsilica_kg": [
+        0.0,
+        28.0
+      ],
+      "source_synthetic": [
+        0.0,
+        1.0
+      ],
+      "source_boxcrete": [
+        0.0,
+        1.0
+      ],
+      "source_normal_concrete": [
+        0.0,
+        1.0
+      ]
+    }
+  },
+  "metrics": {
+    "train": {
+      "mae": 3.0821900992079763,
+      "rmse": 4.640127406474447,
+      "mape": 15.94886769971401,
+      "r2": 0.9191137728522284
+    },
+    "validation": {
+      "mae": 3.801394720768597,
+      "rmse": 5.919455759298224,
+      "mape": 21.476902471493116,
+      "r2": 0.8674617190837057
+    },
+    "train_by_period": {
+      "day_1": {
+        "mae": 2.3096994761395164,
+        "rmse": 3.6993304137392418,
+        "mape": 31.63967512538692,
+        "r2": 0.7819391907260826,
+        "n_samples": 1446
+      },
+      "day_3": {
+        "mae": 2.796809423323687,
+        "rmse": 4.100486608148585,
+        "mape": 11.999525877651896,
+        "r2": 0.8678882146995452,
+        "n_samples": 1446
+      },
+      "day_7": {
+        "mae": 3.2681186072204693,
+        "rmse": 4.72906598422667,
+        "mape": 10.451195537072234,
+        "r2": 0.8830883093603593,
+        "n_samples": 1446
+      },
+      "day_28": {
+        "mae": 3.9541328901482333,
+        "rmse": 5.767150802299979,
+        "mape": 9.705074258744991,
+        "r2": 0.8798539632125792,
+        "n_samples": 1446
+      }
+    },
+    "validation_by_period": {
+      "day_1": {
+        "mae": 2.568305050520085,
+        "rmse": 4.152458764674595,
+        "mape": 37.25794163887644,
+        "r2": 0.7251563959933507,
+        "n_samples": 362
+      },
+      "day_3": {
+        "mae": 3.459281877082791,
+        "rmse": 5.126097739845192,
+        "mape": 19.49697121961061,
+        "r2": 0.7955094956702782,
+        "n_samples": 362
+      },
+      "day_7": {
+        "mae": 4.212155376699582,
+        "rmse": 6.301588845206667,
+        "mape": 15.549897613331359,
+        "r2": 0.7930353282828267,
+        "n_samples": 362
+      },
+      "day_28": {
+        "mae": 4.965836578771932,
+        "rmse": 7.5451979523637265,
+        "mape": 13.602799414154045,
+        "r2": 0.7921934889099913,
+        "n_samples": 362
+      }
+    },
+    "validation_picp95": 0.960635359116022,
+    "conformal_q_hat": 1.9092263618994814,
+    "validation_picp95_conformal": 0.9578729281767956,
+    "train_weighted": {
+      "mae": 3.0821900992079763,
+      "rmse": 4.640127406474447,
+      "mape": 15.94886769971401,
+      "r2": 0.9191137728522284
+    },
+    "validation_weighted": {
+      "mae": 3.801394720768597,
+      "rmse": 5.919455759298224,
+      "mape": 21.476902471493116,
+      "r2": 0.8674617190837057
+    },
+    "train_weighted_by_period": {
+      "day_1": {
+        "mae": 2.3096994761395164,
+        "rmse": 3.6993304137392418,
+        "mape": 31.63967512538692,
+        "r2": 0.7819391907260826,
+        "n_samples": 1446,
+        "weight_sum": 1446.0
+      },
+      "day_3": {
+        "mae": 2.796809423323687,
+        "rmse": 4.100486608148585,
+        "mape": 11.999525877651896,
+        "r2": 0.8678882146995452,
+        "n_samples": 1446,
+        "weight_sum": 1446.0
+      },
+      "day_7": {
+        "mae": 3.2681186072204693,
+        "rmse": 4.72906598422667,
+        "mape": 10.451195537072234,
+        "r2": 0.8830883093603593,
+        "n_samples": 1446,
+        "weight_sum": 1446.0
+      },
+      "day_28": {
+        "mae": 3.9541328901482333,
+        "rmse": 5.767150802299979,
+        "mape": 9.705074258744991,
+        "r2": 0.8798539632125792,
+        "n_samples": 1446,
+        "weight_sum": 1446.0
+      }
+    },
+    "validation_weighted_by_period": {
+      "day_1": {
+        "mae": 2.568305050520085,
+        "rmse": 4.152458764674595,
+        "mape": 37.25794163887644,
+        "r2": 0.7251563959933507,
+        "n_samples": 362,
+        "weight_sum": 362.0
+      },
+      "day_3": {
+        "mae": 3.459281877082791,
+        "rmse": 5.126097739845192,
+        "mape": 19.49697121961061,
+        "r2": 0.7955094956702782,
+        "n_samples": 362,
+        "weight_sum": 362.0
+      },
+      "day_7": {
+        "mae": 4.212155376699582,
+        "rmse": 6.301588845206667,
+        "mape": 15.549897613331359,
+        "r2": 0.7930353282828267,
+        "n_samples": 362,
+        "weight_sum": 362.0
+      },
+      "day_28": {
+        "mae": 4.965836578771932,
+        "rmse": 7.5451979523637265,
+        "mape": 13.602799414154045,
+        "r2": 0.7921934889099913,
+        "n_samples": 362,
+        "weight_sum": 362.0
+      }
+    },
+    "validation_mean_uncertainty_mpa": 5.272917057442095
+  },
+  "gost_28d": {
+    "enabled": false,
+    "violations": 0,
+    "samples_28d": 0
+  },
+  "discriminator": {
+    "neat_algorithm": "python-neat",
+    "validation_realness_mean": 0.5757974982261658,
+    "validation_realness_std_mean": 0.10146766155958176
+  }
+}

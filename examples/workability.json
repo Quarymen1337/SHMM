@@ -1,0 +1,13 @@
+{
+  "data_path": "data/workability_data.csv",
+  "hidden_layers": [128, 128, 64],
+  "dropout": 0.15,
+  "learning_rate": 0.001,
+  "weight_decay": 1e-4,
+  "batch_size": 32,
+  "epochs": 300,
+  "early_stopping_rounds": 30,
+  "validation_split": 0.20,
+  "seed": 42,
+  "mc_samples": 64
+}

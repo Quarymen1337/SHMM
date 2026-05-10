@@ -1,0 +1,9 @@
+numpy>=1.26,<2.0
+pandas>=2.0
+torch>=2.0
+pyro-ppl>=1.9
+neat-python>=0.92
+cloudpickle>=3.0
+scikit-learn>=1.4
+matplotlib>=3.7
+Pillow>=10.0

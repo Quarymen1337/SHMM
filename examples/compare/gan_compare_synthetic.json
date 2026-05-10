@@ -1,0 +1,92 @@
+{
+  "dataset": {
+    "data_path": "../../data/processed/strength_synthetic_v7schema.csv",
+    "components": [
+      "cement",
+      "sand",
+      "gravel",
+      "water",
+      "plasticizer_kg",
+      "fly_ash",
+      "microsilica_kg"
+    ],
+    "strength_by_day": {
+      "1": "strength_1",
+      "3": "strength_3",
+      "7": "strength_7",
+      "28": "strength_28"
+    },
+    "min_time": 1,
+    "max_time": 28
+  },
+  "physics": {
+    "cement_feature": "cement",
+    "water_feature": "water",
+    "add_log_time_feature": true,
+    "add_abrams_features": true,
+    "add_extended_features": true,
+    "monotonic_weight": 0.08,
+    "abrams_weight": 0.12
+  },
+  "generator": {
+    "hidden_layers": [128, 96, 64],
+    "noise_dim": 24,
+    "dropout": 0.12,
+    "learning_rate": 0.0008,
+    "weight_decay": 0.0001,
+    "batch_size": 32,
+    "warmup_epochs": 20,
+    "epochs_per_round": 15,
+    "early_stopping_rounds": 8,
+    "supervised_weight": 1.2,
+    "adversarial_weight": 0.08,
+    "mape_weight": 0.15,
+    "period_weights": [1.0, 1.0, 2.0, 4.0],
+    "max_grad_norm": 1.2,
+    "use_uncertainty_head": true,
+    "nll_weight": 0.25
+  },
+  "discriminator": {
+    "optimizer": {
+      "algorithm": "python-neat",
+      "limit_generations": 4,
+      "pop_size": 40,
+      "es_population": 80,
+      "seed": 44,
+      "sigma": 0.02,
+      "elite_rate": 0.15,
+      "use_bias": true,
+      "optimizer_lr": 0.01,
+      "node_mutation_rate": 0.35,
+      "connection_mutation_rate": 0.25,
+      "disable_connection_mutation_rate": 0.03,
+      "dominant_gene_rate": 0.5,
+      "dominant_gene_delta": 0.01,
+      "hidden_activation": "passthrough",
+      "output_activation": "tanh",
+      "sigma_prior": 1.0,
+      "kl_weight": 0.008,
+      "kl_warmup_steps": 8,
+      "initial_rho": -1.8,
+      "n_eval_samples": 1,
+      "risk_aversion": 0.0
+    },
+    "prior_std": 0.6,
+    "posterior_scale_init": 0.10,
+    "kl_weight": 0.005,
+    "bnn_learning_rate": 0.006,
+    "bnn_epochs": 40,
+    "bnn_batch_size": 64,
+    "bnn_validation_split": 0.2,
+    "bnn_mc_samples": 64,
+    "bnn_early_stopping_rounds": 8
+  },
+  "training": {
+    "rounds": 2,
+    "validation_split": 0.2,
+    "seed": 44,
+    "generator_mc_samples": 80,
+    "fake_jitter_std": 0.1
+  },
+  "gost_path": "../../data/ГОСТы.csv"
+}
