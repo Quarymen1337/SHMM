@@ -50,7 +50,7 @@ grep -n "Running generation\|HEARTBEAT\|FINISH\|EXIT_CODE" artifacts/train_gan_v
 
 ## Ключевые файлы
 
-- `SOLUTION.ipynb` — финальный ноутбук с архитектурой и метриками
+- `final_solution.ipynb` — финальный ноутбук с архитектурой и метриками
 - `examples/gan_v18_final.json` — основной финальный конфиг обучения
 - `data/processed/all_sources_strength_v16_full.csv` — полный датасет (1808 строк)
 - `materialgen/train_gan.py` — реализация обучения GAN
